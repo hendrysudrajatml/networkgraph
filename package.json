@@ -1,0 +1,16 @@
+{
+  "name": "e2e-diagram-services-delivery",
+  "version": "0.1.0",
+  "description": "E2E Diagram for Services Delivery",
+  "private": true,
+  "scripts": {
+ 
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+     
+   
+  }
+}

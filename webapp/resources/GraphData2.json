@@ -1,0 +1,84 @@
+{
+  "nodes": [
+    {
+      "key": 0,
+      "group": "gISP",
+      "title": "Activity (CATS)",
+      "description": "Activity Record",
+      "x": 0,
+      "y": 0,
+      "status": "stat1",
+      "icon": "sap-icon://document-text",
+      "attributes": [
+        {
+          "label": "Table",
+          "value": "CATSDB"
+        },
+        {
+          "label": "*Workdate",
+          "value": "N"
+        }
+      ]
+    },
+    {
+      "key": 1,
+      "height": 350,
+      "group": "gISP",
+      "title": "Activity (CATS)",
+      "description": "Activity Record",
+      "x": 0,
+      "y": 0,
+      "status": "stat1",
+      "icon": "sap-icon://document-text",
+      "attributes": [
+        {
+          "label": "Table",
+          "value": "CATSDB"
+        },
+        {
+          "label": "*Workdate",
+          "value": "N"
+        }
+      ]
+    },
+    {
+      "key": 2,
+      "height": 75,
+      "group": "gICP",
+      "title": "Changi",
+      "description": "Changi Airport",
+      "x": 200,
+      "y": 0,
+      "status": "Warning",
+      "icon": "sap-icon://flight",
+      "attributes": [
+        {
+          "label": "Elevation",
+          "value": "25 m"
+        },
+        {
+          "label": "Operational from",
+          "value": "1929"
+        }
+      ]
+    }
+  ],
+  "lines": [
+    {
+      "from": 0,
+      "to": 1,
+      "attributes": [
+        {
+          "label": "Triggers",
+          "value": "Once"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    { "key": "gISP", "title": "ISP", "status": "stat2"
+    },
+    {  "key": "gICP", "title": "ICP","status": "stat2"}
+  ]
+
+}

@@ -1,0 +1,71 @@
+<mvc:View
+		controllerName="sap.com.ssdm.e2e.controller.Graph"
+		xmlns="sap.suite.ui.commons.networkgraph"
+		xmlns:core="sap.ui.core"
+		xmlns:gl="sap.suite.ui.commons.networkgraph.layout"
+		xmlns:mvc="sap.ui.core.mvc"
+		height="100%">
+	<Graph  orientation="LeftRight"
+			id="graph"
+			height="100%"
+			width="100%"
+			nodes="{/nodes}"
+			lines="{/lines}"
+
+			groups="{/groups}">
+		<statuses>
+			<Status key="stat1" backgroundColor="red">
+				<customData>
+					<core:CustomData key="key1"  value="val1"></core:CustomData>
+					<core:CustomData key="key2"  value="val2"></core:CustomData>
+					<core:CustomData key="key3"  value="val3"></core:CustomData>
+				</customData>
+			</Status>
+		</statuses>
+
+<layoutAlgorithm>
+			<gl:NoopLayout></gl:NoopLayout>
+		</layoutAlgorithm>
+		<nodes>
+			<Node
+					key="{key}"
+					title="{title}"
+					group="{group}"
+					icon="{icon}"
+					attributes="{path:'attributes', templateShareable:true}"
+					showActionLinksButton="false"
+					status="{status}"
+					shape="{shape}">
+				<attributes>
+					<ElementAttribute
+							label="{label}"
+							value="{value}"/>
+				</attributes>
+			</Node>
+		</nodes>
+
+		<lines>
+			<Line
+					from="{from}"
+					to="{to}"
+					attributes="{path:'attributes', templateShareable:true}"
+					status="{status}">
+				<attributes>
+					<ElementAttribute
+							label="{label}"
+							value="{value}"/>
+				</attributes>
+			</Line>
+		</lines>
+		<groups>
+			<Group
+					headerCheckBoxState="{headerCheckboxState}"
+					status="{status}"
+					icon="sap-icon://measure"
+					collapsed="{collapsed}"
+					key="{key}"
+					title="{title}">
+			</Group>
+		</groups>
+	</Graph>
+</mvc:View>

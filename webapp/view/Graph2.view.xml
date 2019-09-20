@@ -1,0 +1,76 @@
+<mvc:View
+
+		controllerName="sap.com.ssdm.e2e.controller.Graph2"
+		xmlns="sap.suite.ui.commons.networkgraph"
+		xmlns:gl="sap.suite.ui.commons.networkgraph.layout"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:tnt="sap.tnt"
+		height="100%">
+
+
+
+	<Graph
+			id="graph"
+			height="100%"
+			width="100%"
+			nodes="{/nodes}"
+			lines="{/lines}"
+			groups="{/groups}"
+	>
+
+		<statuses>
+			<Status key="stat1" backgroundColor="#FFAABB" ></Status>
+			<Status key="stat2" backgroundColor="#BBCCDD" ></Status>
+		</statuses>
+
+<!--		<layoutAlgorithm>
+			<gl:SwimLaneChainLayout></gl:SwimLaneChainLayout>
+		</layoutAlgorithm>-->
+		<nodes>
+			<Node
+					key="{key}"
+					title="{title}"
+					height="{height}"
+					group="{group}"
+					icon="{icon}"
+					description="{description}"
+					attributes="{path:'attributes', templateShareable:true}"
+					showActionLinksButton="false"
+					status="{status}"
+					x="{x}"
+					y="{y}"
+					shape="Box">
+				<attributes>
+					<ElementAttribute
+							label="{label}"
+							value="{value}"/>
+				</attributes>
+				<actionButtons>
+					<ActionButton
+							icon="sap-icon://inspect"
+							title="Destinations"
+							press="routeButtonPress"/>
+				</actionButtons>
+			</Node>
+		</nodes>
+		<lines>
+			<Line
+					from="{from}"
+					to="{to}"
+					title="{title}"
+					description="{description}"
+					attributes="{path:'attributes', templateShareable:true}"
+					status="{status}">
+				<attributes>
+					<ElementAttribute
+							label="{label}"
+							value="{value}"/>
+				</attributes>
+			</Line>
+		</lines>
+
+		<groups>
+			<Group icon="{icon}" description="{description}"   key="{key}" title="{title}" status="{status}"></Group>
+		</groups>
+	</Graph>
+</mvc:View>
